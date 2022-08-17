@@ -9,4 +9,9 @@ Rails.application.routes.draw do
     collection do
     end
   end
+  resources :settings do
+    collection do
+      get :download_csv
+    end
+  end
 end

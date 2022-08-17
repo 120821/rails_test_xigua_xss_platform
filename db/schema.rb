@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_11_19_233335) do
+ActiveRecord::Schema.define(version: 2022_08_17_061821) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -23,6 +23,15 @@ ActiveRecord::Schema.define(version: 2021_11_19_233335) do
     t.string "user_name", comment: "当前用户"
     t.text "parameters", comment: "各种参数"
     t.text "full_request", comment: "完整的request, 带有header, cookie等"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "settings", force: :cascade do |t|
+    t.string "name"
+    t.string "value"
+    t.string "default"
+    t.string "comment"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
