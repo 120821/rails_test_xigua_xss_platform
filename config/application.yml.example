@@ -1,0 +1,7 @@
+aliyun_sms_key_id: LTAI5tSGUyHFDKT1ppg
+aliyun_sms_key_secret: 8Kq0TSCjk8MGhWT
+aliyun_sms_signature: luelue
+aliyun_sms_template_code: SMS_150500???
+aliyun_sms_template_param_name: code
+mobile: 13344445555
+sms_content: xxssss
