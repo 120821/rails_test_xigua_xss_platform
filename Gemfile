@@ -1,12 +1,13 @@
 # 在国内server 使用用这个
-#source 'https://gems.ruby-china.com'
+source 'https://gems.ruby-china.com'
 # 在海外服务器使用用这个
-source 'https://rubygems.org'
+#source 'https://rubygems.org'
 
 # ruby '2.5.8'
 
 gem 'rails', '6.1.4.1'
-gem 'mysql2', '0.5.3'
+#gem 'mysql2', '0.5.3'
+gem 'pg'
 gem 'puma', '5.5.2'
 gem 'sass-rails', '6.0.0'
 gem 'webpacker', '5.4.3'

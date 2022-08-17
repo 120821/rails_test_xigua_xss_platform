@@ -130,11 +130,11 @@ GEM
     minitest (5.14.4)
     msgpack (1.4.2)
     multipart-post (2.1.1)
-    mysql2 (0.5.3)
     nio4r (2.5.8)
-    nokogiri (1.12.5-x86_64-linux)
+    nokogiri (1.13.8-x86_64-linux)
       racc (~> 1.4)
     orm_adapter (0.5.0)
+    pg (1.4.3)
     puma (5.5.2)
       nio4r (~> 2.0)
     racc (1.6.0)
@@ -225,16 +225,13 @@ DEPENDENCIES
   jbuilder (= 2.11.3)
   kaminari (= 1.2.1)
   listen (= 3.7.0)
-  mysql2 (= 0.5.3)
+  pg
   puma (= 5.5.2)
   rack-mini-profiler (= 2.3.3)
   rails (= 6.1.4.1)
   sass-rails (= 6.0.0)
   spring (= 3.0.0)
   webpacker (= 5.4.3)
-
-RUBY VERSION
-   ruby 2.5.8p224
 
 BUNDLED WITH
    2.2.12
