@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>XiguaXssPlatform</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all' %>
+    <%= javascript_pack_tag 'application' %>
+    <link href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.css" rel="stylesheet">
+  </head>
+
+  <body>
+    <% if user_signed_in? %>
+      <ul class="nav navbar-nav" style='float:right'>
+        <li><%= link_to "欢迎你：#{current_user.try :email}" %></li>
+        <li>
+          <%= link_to '退出', destroy_user_session_path, :method => :delete  %>
+        </li>
+      </ul>
+    <% else %>
+      <ul class="nav navbar-nav" style='float:right'>
+        <li>
+          <%= link_to '登陆' , '/users/sign_in', :method => :get%>
+        </li>
+      </ul>
+    <% end %>
+    <%= yield %>
+  </body>
+</html>

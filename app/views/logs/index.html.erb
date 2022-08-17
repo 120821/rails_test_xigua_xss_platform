@@ -1,0 +1,20 @@
+<h3>操作日志</h3>
+<%= paginate @logs %>
+<table class='table table-bordered table-hover table-striped'>
+  <tr>
+    <th>ID</th>
+    <th>时间</th>
+    <th>详情</th>
+    <th>详情full request</th>
+  </tr>
+  <% @logs.each do |log| %>
+  <tr>
+    <td><%= log.id %></td>
+    <td><%= log.created_at.strftime '%Y-%m-%d %H:%M:%S' %></td>
+    <td><%= log.parameters %></td>
+    <td><%= log.full_request%></td>
+  </tr>
+  <% end %>
+
+</table>
+<%= paginate @logs %>
