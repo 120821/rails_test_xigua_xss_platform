@@ -1,0 +1,27 @@
+<%= form_for @setting do |form| %>
+  <table class='table table-striped table-hover table-bordered'>
+    <tr>
+      <th style="width:150px;">名称</th>
+      <td><%= form.text_field :name, class: "form-control", placeholder: "例如 color" %></td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>值</th>
+      <td><%= form.text_field :value, class: "form-control", placeholder: "例如 red" %></td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>默认值</th>
+      <td><%= form.text_field :default, class: "form-control", placeholder: "例如 blue" %></td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>注释</th>
+      <td><%= form.text_field :comment, class: "form-control", placeholder: "例如 用于切换主题颜色, 默认为blue，更换即为red." %></td>
+      <td></td>
+    </tr>
+  </table>
+  <div class="actions">
+    <%= form.submit "确定", class: 'btn btn-primary btn-sm' %>
+  </div>
+<% end %>

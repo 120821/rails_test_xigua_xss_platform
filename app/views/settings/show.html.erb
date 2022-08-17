@@ -1,0 +1,31 @@
+<table class='table table-striped table-hover table-bordered'>
+  <tr>
+    <th style="width:150px;">名称</th>
+    <td><%= @setting.name %></td>
+    <td></td>
+  </tr>
+  <tr>
+    <th>值</th>
+    <td><%= @setting.value %></td>
+    <td></td>
+  </tr>
+  <tr>
+    <th>默认值</th>
+    <td><%= @setting.default %></td>
+    <td></td>
+  </tr>
+  <tr>
+    <th>说明</th>
+    <td><%= @setting.comment %></td>
+    <td></td>
+  </tr>
+  <tr>
+    <th>创建时间</th>
+    <td><%= @setting.created_at.strftime('%Y-%m-%d %H:%M:%S') %></td>
+    <td>
+    </td>
+  </tr>
+</table>
+
+<%= link_to '编辑', edit_setting_path(@setting) %> |
+<%= link_to '返回', settings_path %>
